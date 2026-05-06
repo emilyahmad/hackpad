@@ -29,5 +29,4 @@ A simple macropad with an OLED screen, 1 LED and 6 switches. Have a few differen
 | S1, S2, S3, S4, S5, S6          | MX switches, brown                  | 6 (MOQ 20) | $8.99            | [Amazon](https://www.amazon.com/gp/product/B0888JHM58/ref=ox_sc_act_image_6?smid=A2U3R73MNHPWPS&th=1) |
 
 Macropad Total: $57.33
-
-- Soldering kit: $117.30
+with Soldering kit: $117.30
