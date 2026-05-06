@@ -6,16 +6,16 @@ A simple macropad with an OLED screen, 1 LED and 6 switches. Have a few differen
 
 | Schematic                                  | PCB                            | 3D Viewer                    |
 | ------------------------------------------ | ------------------------------ | ---------------------------- |
-| ![Schematic](hackpad/images/schematic.png) | ![PCB](hackpad/images/pcb.png) | ![3D](hackpad/images/3d.png) |
+| ![Schematic](/images/schematic.png) | ![PCB](/images/pcb.png) | ![3D](/images/3d.png) |
 
 # BOM (Components)
 
-| Item                   | Purpose                                | Quantity   | Cost   | Source                                                                                                                                                                                |
-| ---------------------- | -------------------------------------- | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| D1                     | LED_SK6812MINI                         | 1 (MOQ 5)  | $0.43  | [LCSC](https://www.lcsc.com/product-detail/C5149201.html?spm=wm.gwc.xh.0.cbm&lcsc_vid=QFJZBQJfQFMLAlBRFVQKBQJVTwJfX1VfQlEKBVZXQAUxVlNRT1FZUVNVRlNcXzsOAxUeFF5JWBYZEEoKFBINSQcJGk4%3D) |
-| D2, D3, D4, D5, D6, D7 | Diode_DO-35                            | 6 (MOQ 50) | $1.09  | [LCSC](https://www.lcsc.com/product-detail/C258182.html?spm=wm.gwc.xh.1.cbm&lcsc_vid=QFJZBQJfQFMLAlBRFVQKBQJVTwJfX1VfQlEKBVZXQAUxVlNRT1FZUVNVRlNcXzsOAxUeFF5JWBYZEEoKFBINSQcJGk4%3D)  |     |
-| J1                     | OLED_128x32                            | 1          | $2.24  | [LCSC](https://www.lcsc.com/product-detail/C5248081.html?spm=wm.gwc.xh.2.cbm&lcsc_vid=QFJZBQJfQFMLAlBRFVQKBQJVTwJfX1VfQlEKBVZXQAUxVlNRT1FZUVNVRlNcXzsOAxUeFF5JWBYZEEoKFBINSQcJGk4%3D) |
-| U1                     | XIAO-Generic-Hybrid-14P-2.54-21X17.8MM | 1          | $10.99 | [Amazon,](https://www.amazon.com/gp/product/B0DRNSV5CS/ref=ox_sc_act_title_2?smid=A1YP59NGBNBZUR&psc=1) pre-soldered                                                                  |
+| Item                   | Purpose           | Quantity   | Cost   | Source                                                                |
+| ---------------------- | ----------------- | ---------- | ------ | --------------------------------------------------------------------- | ------------ |
+| D1                     | RGB LED           | 1 (MOQ 5)  | $0.43  | [LCSC C5149201](https://www.lcsc.com/product-detail/C5149201.html)    |
+| D2, D3, D4, D5, D6, D7 | Signal Diode      | 6 (MOQ 50) | $1.09  | [LCSC C258182](https://www.lcsc.com/product-detail/C258182.html)      |
+| J1                     | OLED 128x32       | 1          | $2.24  | [LCSC C5248081](https://www.lcsc.com/product-detail/C5248081.html)    |
+| U1                     | Seeed XIAO RP2040 | 1          | $10.99 | [Amazon](https://www.amazon.com/gp/product/B0DRNSV5CS) (pre-soldered) | pre-soldered |
 
 # Assembly BOM
 
@@ -29,4 +29,5 @@ A simple macropad with an OLED screen, 1 LED and 6 switches. Have a few differen
 | S1, S2, S3, S4, S5, S6          | MX switches, brown                  | 6 (MOQ 20) | $8.99            | [Amazon](https://www.amazon.com/gp/product/B0888JHM58/ref=ox_sc_act_image_6?smid=A2U3R73MNHPWPS&th=1) |
 
 Macropad Total: $57.33
-+ Soldering kit: $117.30
+
+- Soldering kit: $117.30
