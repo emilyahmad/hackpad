@@ -4,18 +4,18 @@ A simple macropad with an OLED screen, 1 LED and 6 switches. Have a few differen
 
 # Photos
 
-| Schematic                                  | PCB                            | 3D Viewer                    |
-| ------------------------------------------ | ------------------------------ | ---------------------------- |
+| Schematic                           | PCB                     | 3D Viewer             |
+| ----------------------------------- | ----------------------- | --------------------- |
 | ![Schematic](/images/schematic.png) | ![PCB](/images/pcb.png) | ![3D](/images/3d.png) |
 
 # BOM (Components)
 
 | Item                   | Purpose           | Quantity   | Cost   | Source                                                                |
-| ---------------------- | ----------------- | ---------- | ------ | --------------------------------------------------------------------- | ------------ |
+| ---------------------- | ----------------- | ---------- | ------ | --------------------------------------------------------------------- |
 | D1                     | RGB LED           | 1 (MOQ 5)  | $0.43  | [LCSC C5149201](https://www.lcsc.com/product-detail/C5149201.html)    |
 | D2, D3, D4, D5, D6, D7 | Signal Diode      | 6 (MOQ 50) | $1.09  | [LCSC C258182](https://www.lcsc.com/product-detail/C258182.html)      |
 | J1                     | OLED 128x32       | 1          | $2.24  | [LCSC C5248081](https://www.lcsc.com/product-detail/C5248081.html)    |
-| U1                     | Seeed XIAO RP2040 | 1          | $10.99 | [Amazon](https://www.amazon.com/gp/product/B0DRNSV5CS) (pre-soldered) | pre-soldered |
+| U1                     | Seeed XIAO RP2040 | 1          | $10.99 | [Amazon](https://www.amazon.com/gp/product/B0DRNSV5CS) (pre-soldered) |
 
 # Assembly BOM
 
