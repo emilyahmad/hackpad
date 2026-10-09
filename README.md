@@ -1,3 +1,9 @@
+Redesigning this to be s'mores themed
+
+new schem
+[schematic](/images/smorespad_schematic3.png)
+
+
 # Macropad ᶻ 𝗓 𐰁 .ᐟ
 
 A simple macropad with an OLED screen, 1 LED and 6 switches. Have a few different ideas on how I'll use it/firmware, some ideas: keyboard shortcuts for git commands, game controller, MIDI controller. Made using @Alex Ren's hackpad guide and Joe Scotto's keyboard guides.

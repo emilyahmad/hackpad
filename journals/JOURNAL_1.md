@@ -36,7 +36,13 @@ Because adding an additional 4.7 Ω resistor won't damage or make it slower, I'l
 + Where should you add pwr_flags vs 3.3V in kicad?
 Where power enters from an external source: I'll add to the VCC_3.3V pin on the C3.
 
++ Swap 3.3v with PWR_FLAG pin or just ignore?
+I might need to add a USB-Receptable part of the wiring like my devboard. I won't need a separate receptable like the devboard because the C3 has the USB-C connector (Claude).
+
 + Should I add a pwr_flag to the GND output of the C3 as well?
+Oh it's mainly for power outputs? Ohh I think I get it, you just put the power flag between the 3.3V or GND/whatever power symbol, just like you would with a resistor - on the net.
+
+[Pwr flag placed right](/images/place_pwr_flag.png)
 
 I'll probably do through-hole resistors because that's easier to solder. For assigning the footprint, I'll expand the Resistor_THT and choose based on size and power rating. For a 4.7K resistor, [this axial](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/CF14JT4K70/1741428?gclsrc=aw.ds&gad_source=4&gad_campaignid=20682878391&gbraid=0AAAAADrbLlhHagyj9VcMYXw5Jg6t3uN1_&gclid=CjwKCAjwoaLWBhAWEiwAnyitu0q7ZIoBEf24n7WvusGYdJZPNJ8Uxk2ilCPZ5ONNjpV8P_V0X50U-RoCQjoQAvD_BwE) is 0.25W and 0.091" Dia x 0.236" L (2.30mm x 6.00mm). If the hole diameter must be 0.1 mm to 0.3 mm larger than the resistor lead diameter, I need a footprint that's around 2.4 - 2.6 mm.
 
@@ -57,9 +63,15 @@ and place it vertically to better fit the board. Next time I might just surface 
 
 [Resistor visual](/images/footprints_assigned.png)
 
-
-[datasheet](https://www.seielect.com/catalog/SEI-CF_CFM.pdf)
-
 + Switches have no external pull-up so use INPUT_PULLUP and read them as active-low
+Figure this out when the parts arrive/designing firmware.
 
-+ Swap 3.3v with PWR_FLAG pin or just ignore?
+Let's gooo - no more errors. I was having a "current configuration does not include footprint library" error but I just re-assigned the footprint and it worked. Here's the wiring:
+
+[Schematic 2](/images/smorespad_schematic2.png)
+
+Let's check again with Claude then PCB time. Oh I did the pull ups on the resistors wrong. I'm going to re-orgnize the whole schematic based on the components and use labels for the digital pins. SDA and SCL should be bidirectional shaped labels, MCU digital pins are input shaped and those coming out of the other components are outputs.
+
+[Schematic 3](/images/smorespad_schematic3.png)
+
+Ok wiring looks good.
