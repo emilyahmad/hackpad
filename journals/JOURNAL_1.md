@@ -45,6 +45,19 @@ Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal
 ```
 L3.6mm: barrel/body length, D1.6mm: body diameter, P7.62mm: pitch/center-to-center distance - still don't really understand but this needs to match. Horizontal/vertical is the mounting orientation - I didn't know that actually mattered.
 
+I'll look for the actual part I want to buy before assigning the footprint to make sure the pitch matches. I should just need 2 4.7K resistors. I'm kind of scared to use Aliexpress for now so I'll get a more expensive option that arrives earlier from Amazon that describes the body length and diameter as well as pitch. 
+
+[This one](https://www.amazon.com/dp/B07HDFHPP3?niid=nl_cl_lst_a_1_1&ref_=nl_cl_lst_a_1_1&nrid=AMSVW953F9Z4BAB6X13X&th=1) approximates
+Shell (body) length: 6mm
+Max body diameter: 2.5mm
+
+So I'll look for a footprint similar to L6mm_D2.5mm
+[Resistor visual](/images/resistor_visual.png)
+and place it vertically to better fit the board. Next time I might just surface mount & PCBA it. When it arrives I have to mesaure the body and make sure its body is within .5 mm and choose Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical
+
+[Resistor visual](/images/footprints_assigned.png)
+
+
 [datasheet](https://www.seielect.com/catalog/SEI-CF_CFM.pdf)
 
 + Switches have no external pull-up so use INPUT_PULLUP and read them as active-low
