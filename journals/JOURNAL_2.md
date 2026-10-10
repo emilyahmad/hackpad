@@ -9,8 +9,6 @@ New plan because the OLED is lowkey huge: put the C3 behind the OLED so the USB-
 
 I'm planning to add ~ 1.5mm spacing between each component. Never mind, that looks huge in the 3D viewer. Oh but that's the indivudal switches, there's going to need to be space for the keycaps. I'll just keep them bordering each other, so no overlap.
 
-![PCB switch placement](/images/![New placement](/images/general_placement2.png).png)
-
 Oh my gosh I didn't realize vertical mounting was like z-axis vertical.
 
 ![Vertical resistor mounting](/images/vertical_mount.png)
