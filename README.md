@@ -3,6 +3,9 @@ Redesigning this to be s'mores themed
 new schem
 ![schematic](/images/schematic4.png)
 
+pcb wired
+![pcb](/images/pcb1.png)
+
 
 # Macropad ᶻ 𝗓 𐰁 .ᐟ
 
