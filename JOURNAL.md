@@ -1,3 +1,12 @@
+---
+title: "S'mores Pad"
+author: "Emily Ahmad"
+description: "A s'mores themed macropad, with 4 keys and an OLED powered by a XIAO ESP32-C3"
+created_at: "2026-10-10"
+---
+
+# October 7: Designign in Figma, determining component placement
+
 I was working on this macropad as my first hardware project for Stasis back in April I think, but the guide was really hard for me to follow, so I finished making the PCB and tried to submit the project without any CAD or firmware (not cooking).
 
 A few months ago I saw a really cute video of these girls with keychains that had keycaps of toasted bread, but they kind of looked like slightly burnt marshmallows to me, which gave me the idea to make a really cute s'mores themed macropad for end of summer/beginning of fall. I feel like the s'mores components will actually fit well into the design, as you can see below:
@@ -33,6 +42,7 @@ Because adding an additional 4.7 Ω resistor won't damage or make it slower, I'l
 
 ![Added resistors](/images/added_resistors.png)
 
+# October 8-9: Adjusting the schematic
 + Where should you add pwr_flags vs 3.3V in kicad?
 Where power enters from an external source: I'll add to the VCC_3.3V pin on the C3.
 
@@ -75,3 +85,58 @@ Let's check again with Claude then PCB time. Oh I did the pull ups on the resist
 ![Schematic 3](/images/smorespad_schematic3.png)
 
 Ok wiring looks good.
+
+# October 10: Routing the PCB
+
+Maybe next time should've used a keyboard matrix?
+![keyboard matrix](https://i.ytimg.com/vi/7LyziNdFlew/sddefault.jpg)
+
+Placing the switches/keys is so frustrating. I saw a youtube comment saying to use a plugin so I might just use that. I'm trying to do the grid spacing, setting a grid origin point and moving with reference but it's not working (this happened last time too, a few months ago and I wasn't able to figure it out)
+
+New plan because the OLED is lowkey huge: put the C3 behind the OLED so the USB-C still sticks out, but the new design will look more like this:
+
+![New placement](/images/general_placement2.png)
+
+I'm planning to add ~ 1.5mm spacing between each component. Never mind, that looks huge in the 3D viewer. Oh but that's the indivudal switches, there's going to need to be space for the keycaps. I'll just keep them bordering each other, so no overlap.
+
+![PCB switch placement](/images/![New placement](/images/general_placement2.png).png)
+
+Oh my gosh I didn't realize vertical mounting was like z-axis vertical.
+
+![Vertical resistor mounting](/images/vertical_mount.png)
+
+That's horrible when would I need that.
+
+I'm going to change the OLED I use as well to something smaller. [These look cute](https://www.amazon.com/AITRIP-Display-Compact-Self-Luminous-Projects/dp/B0F5WPZJ92/ref=sr_1_3?crid=1W4R4XG6EKCV5&dib=eyJ2IjoiMSJ9.3XLdBWCYkPI47uifaPVXK99n5IV_giyShHyUTwhnWVEDP-yJQa0B5RzTQDlgrxDCSBCv30FgSrZCUTYryvVypnn40UWekQQI2bAbhrSGSkYcp7x-KUrSyH3ivYsNBqbA5B57mn4_AdDgzZp3m5RYfosxBzJAf01tTG9NzWauOoSeACfzrY_SQSsK9G-0B-RS-Z5E1zmI8CP4NRw2GmF2fZKC277QnFr_n7N2xnK2WdH990BNvNBRzgvqPAHG3AvXepj0D5ViaBcreogHT7AdI-a7xTj7ATU093yoKpsHg-g.wDJkpx_Bcac2kKQFXO91Q54QMV_RH7YsK3zA3Og26pk&dib_tag=se&keywords=OLED%2Bdisplay%2Bfor%2Bpcb%2Bpresoldered&qid=1791608771&s=industrial&sprefix=oled%2Bdisplay%2Bfor%2Bpcb%2Bpresoldered%2Cindustrial%2C92&sr=1-3&th=1) and are white, not finding any presoldered ones.
+
++ Should I just put correctly wired header pins on the PCB instead of an OLED footprint?
+I guess so, this OLED works with header pins with 2.54 mm spacing.
+
+Here's the updated schematic, I just need to change the resistor footprints to horizontal mounting and assign the right header pins.
+
+![Header pins](/images/updated_OLED.png)
+
+Debating if I get surface mounted resistors and have them with the board.. Nah. These are the new footprints:
+
+![New footprints](/images/new_footprints.png)
+
+Back to the PCB.
+
+I'm reconsidering the placement of the C3 to be -90° now that the OLED's pins are at the top. The USB would come in from the side, like this:
+
+![Side placement](/images/side_placement.png)
+*Except the OLED would be smaller and square shaped.
+
+I think I'll go with it.
+
+I need to make sure the OLED isn't pre-soldered. Shoot ok so all of these are presoldered. I'll need to use a female socket/header socket instead. Cool - same symbol, just changing the footprint to PinSocket. Also I'll definitely stick to a vertical orientation:
+![Vertical socket](/images/socket_orientation.png)
+
+![3d vertical socket](/images/socket_3d.png)
+Yeah that looks right. So do the horizontal mounted resistors.
+
+Shoot I was looking at the hackpad gallery and I kind of like the 1x 0.91" 128x32 OLED Display more. I think it works with my current set up?
+
+![PCB v1](/images/pcb1.png)
+
+This is what the PCB looks like, I want to prototype it in real life and measure it on my own before ordering the PCB, so I'll get the parts before.
