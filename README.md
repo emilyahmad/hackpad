@@ -1,7 +1,7 @@
 Redesigning this to be s'mores themed
 
 new schem
-[schematic](/images/smorespad_schematic3.png)
+![schematic](/images/schematic4.png)
 
 
 # Macropad ᶻ 𝗓 𐰁 .ᐟ
