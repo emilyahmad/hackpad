@@ -9,8 +9,6 @@ New plan because the OLED is lowkey huge: put the C3 behind the OLED so the USB-
 
 I'm planning to add ~ 1.5mm spacing between each component. Never mind, that looks huge in the 3D viewer. Oh but that's the indivudal switches, there's going to need to be space for the keycaps. I'll just keep them bordering each other, so no overlap.
 
-![PCB switch placement](/images/![New placement](/images/general_placement2.png).png)
-
 Oh my gosh I didn't realize vertical mounting was like z-axis vertical.
 
 ![Vertical resistor mounting](/images/vertical_mount.png)
@@ -31,22 +29,3 @@ Debating if I get surface mounted resistors and have them with the board.. Nah. 
 ![New footprints](/images/new_footprints.png)
 
 Back to the PCB.
-
-I'm reconsidering the placement of the C3 to be -90° now that the OLED's pins are at the top. The USB would come in from the side, like this:
-
-![Side placement](/images/side_placement.png)
-*Except the OLED would be smaller and square shaped.
-
-I think I'll go with it.
-
-I need to make sure the OLED isn't pre-soldered. Shoot ok so all of these are presoldered. I'll need to use a female socket/header socket instead. Cool - same symbol, just changing the footprint to PinSocket. Also I'll definitely stick to a vertical orientation:
-![Vertical socket](/images/socket_orientation.png)
-
-![3d vertical socket](/images/socket_3d.png)
-Yeah that looks right. So do the horizontal mounted resistors.
-
-Shoot I was looking at the hackpad gallery and I kind of like the 1x 0.91" 128x32 OLED Display more. I think it works with my current set up?
-
-![PCB v1](/images/pcb1.png)
-
-This is what the PCB looks like, I want to prototype it in real life and measure it on my own before ordering the PCB, so I'll get the parts before.
