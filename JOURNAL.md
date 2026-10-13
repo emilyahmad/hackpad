@@ -140,3 +140,79 @@ Shoot I was looking at the hackpad gallery and I kind of like the 1x 0.91" 128x3
 ![PCB v1](/images/pcb1.png)
 
 This is what the PCB looks like, I want to prototype it in real life and measure it on my own before ordering the PCB, so I'll get the parts before.
+
+# October 10: BOM time
+
+Before I finalize the PCB, I want to have the physical components to play with so let's find them and order them.
+
++ 4.7K ohm resistors: I should already have from my arduino starter kit (I'll confirm in the morning)
++ [0.91 inch 128x32 I2C](https://www.amazon.com/gp/product/B07PDFCVXL/ref=ox_sc_act_image_1?smid=A2ZDGCOOU4F0SF&psc=1)
++ XIAO ESP32C3
++ [Marshmallow keycap](https://www.amazon.com/gp/product/B0GXKFVZB1/ref=ox_sc_act_title_2?smid=A2N8YDAE199BID&psc=1) - technically "toasted bread"
+
+# October 12: Some parts arrived
+
+The self healing cutting mat (I think that's what it's called, or a cutting mat? - the mat that everyone who works in hardware/engineering has, but I got it in pink of course) and the OLED both arrived in the mail today, so I'm just waiting on the keycaps. I'm going to try to prototype the macropad with what I have so far
+
+On the OLED, there's SCK and SDA which map to D8 and D4 respectively, I think that changes some of the pin outs.
+
+Ok I just wired it up to the XIAO, apparently there's no indicator if the OLED is connected, the XIAO's LED is red so looks good.
+
+Using the instructions from an [old project](https://github.com/emilyahmad/pear-phone/blob/main/journals/JOURNAL_2.md) to get the C3 board running with Arduino IDE.
+
+Also installed Adafruit SSD1306 and Adafruit GFX libraries. Code didn't work, I'll try SCK to D5 instead. Worked when I ran the following (AI generated):
+```
+
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 32
+#define OLED_RESET -1
+#define OLED_ADDRESS 0x3C
+
+Adafruit_SSD1306 display(
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
+  &Wire,
+  OLED_RESET
+);
+
+void setup() {
+  Serial.begin(115200);
+
+  // XIAO ESP32C3: SDA = GPIO6, SCL = GPIO7
+  Wire.begin(6, 7);
+
+  // Initialize the OLED
+  if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDRESS)) {
+    Serial.println("OLED not detected or initialization failed!");
+    while (true) {
+      delay(1000);
+    }
+  }
+
+  // Clear the screen
+  display.clearDisplay();
+
+  // Set up text
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 0);
+
+  // Print text
+  display.println("blub blub blub blub");
+  display.println("i miss u <333");
+
+  // Send the text to the screen
+  display.display();
+
+  Serial.println("OLED initialized successfully!");
+}
+
+void loop() {
+  // Nothing else needed for this test
+}
+
+```
