@@ -150,6 +150,8 @@ Before I finalize the PCB, I want to have the physical components to play with s
 + XIAO ESP32C3
 + [Marshmallow keycap](https://www.amazon.com/gp/product/B0GXKFVZB1/ref=ox_sc_act_title_2?smid=A2N8YDAE199BID&psc=1) - technically "toasted bread"
 
+![OLED on](/images/OLEDon.png.png) 
+
 # October 12: Some parts arrived
 
 The self healing cutting mat (I think that's what it's called, or a cutting mat? - the mat that everyone who works in hardware/engineering has, but I got it in pink of course) and the OLED both arrived in the mail today, so I'm just waiting on the keycaps. I'm going to try to prototype the macropad with what I have so far
@@ -160,59 +162,10 @@ Ok I just wired it up to the XIAO, apparently there's no indicator if the OLED i
 
 Using the instructions from an [old project](https://github.com/emilyahmad/pear-phone/blob/main/journals/JOURNAL_2.md) to get the C3 board running with Arduino IDE.
 
-Also installed Adafruit SSD1306 and Adafruit GFX libraries. Code didn't work, I'll try SCK to D5 instead. Worked when I ran the following (AI generated):
-```
+Also installed Adafruit SSD1306 and Adafruit GFX libraries. Code didn't work, I'll try SCK to D5 instead. Worked when I ran the [following](/Code/TestingOLED.cpp). Now I'll measure it and figure out how I want the spacing, I got:
 
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+OLED: 37 x 10 mm
+C3: 20 x 15 mm
+*Need to figure out keycaps (probably ~19.05 mm)
 
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 32
-#define OLED_RESET -1
-#define OLED_ADDRESS 0x3C
-
-Adafruit_SSD1306 display(
-  SCREEN_WIDTH,
-  SCREEN_HEIGHT,
-  &Wire,
-  OLED_RESET
-);
-
-void setup() {
-  Serial.begin(115200);
-
-  // XIAO ESP32C3: SDA = GPIO6, SCL = GPIO7
-  Wire.begin(6, 7);
-
-  // Initialize the OLED
-  if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDRESS)) {
-    Serial.println("OLED not detected or initialization failed!");
-    while (true) {
-      delay(1000);
-    }
-  }
-
-  // Clear the screen
-  display.clearDisplay();
-
-  // Set up text
-  display.setTextSize(1);
-  display.setTextColor(SSD1306_WHITE);
-  display.setCursor(0, 0);
-
-  // Print text
-  display.println("blub blub blub blub");
-  display.println("i miss u <333");
-
-  // Send the text to the screen
-  display.display();
-
-  Serial.println("OLED initialized successfully!");
-}
-
-void loop() {
-  // Nothing else needed for this test
-}
-
-```
+Considered a new placement ![new placement](/images/new_placement.png) with the OLED in between the keycaps, but I'll stick to the OLED on top for now.
