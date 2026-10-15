@@ -169,3 +169,16 @@ C3: 20 x 15 mm
 *Need to figure out keycaps (probably ~19.05 mm)
 
 Considered a new placement ![new placement](/images/new_placement.png) with the OLED in between the keycaps, but I'll stick to the OLED on top for now.
+
+# October 13: Silkscreen
+
+
+# October 15: Parts Arrived
+I oriented the pieces how I liked and measured them
+![new placement](/images/irl_parts.png)
+
+| Measurements | mm|
+| -- | -- |
+| Bottom-w | 35 mm|
+| Top-w | 45 mm|
+| Side | 55 mm|
