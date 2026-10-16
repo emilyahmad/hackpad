@@ -171,7 +171,8 @@ C3: 20 x 15 mm
 Considered a new placement ![new placement](/images/new_placement.png) with the OLED in between the keycaps, but I'll stick to the OLED on top for now.
 
 # October 13: Silkscreen
-
+Started experimenting with silkscreens but kind of forgot how to do it (it's been a while).
+![silkscreen](/images/new_silkscreen.png)
 
 # October 15: Parts Arrived
 I oriented the pieces how I liked and measured them
@@ -182,3 +183,8 @@ I oriented the pieces how I liked and measured them
 | Bottom-w | 35 mm|
 | Top-w | 45 mm|
 | Side | 55 mm|
+
+Going to reorient the PCB to better fit these measurements and start researching a place to print my board.
+
+Awesome, no warnings:
+![silkscreen](/images/final_pcb.png)
