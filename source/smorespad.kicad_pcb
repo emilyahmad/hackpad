@@ -680,7 +680,7 @@
 		(property "Reference" "SW1"
 			(at -2.54 -2.794 0)
 			(layer "F.SilkS")
-			(uuid "a1550b0f-c9a4-4bb2-a657-51352d35cc05")
+			(uuid "9dcff768-f624-43c5-b1c8-a832893532d9")
 			(effects
 				(font
 					(size 1 1)
@@ -691,7 +691,7 @@
 		(property "Value" "SW_Push"
 			(at -2.54 12.954 0)
 			(layer "F.Fab")
-			(uuid "d35d988a-6e7d-46b9-b248-dbfbe34d8e95")
+			(uuid "b004b705-215e-4655-accb-3b8a0fd81c82")
 			(effects
 				(font
 					(size 1 1)
@@ -704,7 +704,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "9cab25fd-48d9-4299-a6e3-7a9899641fc1")
+			(uuid "de97e9d7-b0c2-4ff6-a48f-8c99c461a596")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -717,7 +717,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a8ed2a8d-16e1-422f-b2ec-42a27cb8191f")
+			(uuid "bad990ba-c120-4911-83bf-9929334fe3f7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2606,6 +2606,30 @@
 		(fill no)
 		(layer "Edge.Cuts")
 		(uuid "75e81a5e-1958-4a5a-be77-da031d075168")
+	)
+	(gr_text "s'mores pad"
+		(at 89.99 41.48 0)
+		(layer "F.Cu")
+		(uuid "3499997d-f9a4-4e49-8092-9166e242c07a")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.2)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "emoolie"
+		(at 133.89 95.85 90)
+		(layer "F.Cu")
+		(uuid "7e2831c9-7384-4a30-8805-0f8c965d0e46")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.2)
+			)
+			(justify left bottom)
+		)
 	)
 	(segment
 		(start 128.44 59.69)

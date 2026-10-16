@@ -1,3 +1,7 @@
+cool, waiting on pcb to arrive
+
+[bom](bom.csv)
+
 Redesigning this to be s'mores themed
 
 new schem

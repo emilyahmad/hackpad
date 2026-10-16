@@ -188,3 +188,7 @@ Going to reorient the PCB to better fit these measurements and start researching
 
 Awesome, no warnings:
 ![silkscreen](/images/final_pcb.png)
+And it's roughly 46 x 57 mm, I'll order it on JLCPCB even though I want to find a PCB mill/makerspace (researched but didn't find anything).
+
+JLC board dimensions: 45.87 x 57.85 mm
+It'd be cool if the board could be brown and that could be the chocolate looking piece, but I'll make it white in case the case doesn't cover parts of it so it blends in with the marshmallow keycaps.
